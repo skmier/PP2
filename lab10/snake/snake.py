@@ -1,7 +1,7 @@
 import psycopg2, pygame, random, sys
 from configsnake import port, db_name, host, user, password
 
-# --- Pygame ---
+
 pygame.init()
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -11,7 +11,7 @@ font = pygame.font.Font(None, 30)
 
 WHITE, GREEN, RED, BLACK = (255, 255, 255), (0, 255, 0), (255, 0, 0), (0, 0, 0)
 
-# --- БД ---
+
 def connect_db():
     return psycopg2.connect(
         dbname=db_name, user=user, password=password, host=host, port=port
@@ -45,7 +45,7 @@ def generate_food(snake_body):
         if pos not in snake_body:
             return pos
 
-# --- Начало игры ---
+
 username = input("Введите имя игрока: ")
 user_id, game_score, level = get_or_create_user(username)
 speed = 15 + (level - 1) * 3
@@ -124,7 +124,7 @@ while running:
     pygame.display.update()
     clock.tick(speed)
 
-# --- Завершение игры ---
+
 update_user_score(user_id, game_score, level)
 screen.fill(BLACK)
 end_text = font.render("GAME OVER", True, WHITE)
