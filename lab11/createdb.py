@@ -17,7 +17,7 @@ try:
         print("[INFO] DB created successfuly")
 except Exception as _ex:
     print("[INFO] Error while working with psql:", _ex)
-
+ 
 finally:
     if connection:
         connection.close()

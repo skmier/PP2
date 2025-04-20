@@ -28,6 +28,7 @@ try:
 except Exception as ex:
     print("[INFO] Error while working with psql:", ex)
 
+
 finally:
     if connection:
         connection.close()

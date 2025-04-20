@@ -20,6 +20,8 @@ def search_by_pattern(pattern):
         print("error", ex)
 
 
+
+
 # My proceduere in psql for second task
 # CREATE OR REPLACE PROCEDURE insert_or_update4(p_name VARCHAR, p_phone VARCHAR)
 # AS $$
